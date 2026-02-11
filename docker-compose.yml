@@ -1,0 +1,45 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bulk-insert-api
+    ports:
+      - "${PORT}:${PORT}"
+    labels:
+      - "rahulbp"
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - bulk-insert-network
+    volumes:
+      - /uploads
+    command: sh -c "npm run dev"
+  
+  app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: bulk-insert-staging-api
+    ports:
+      - "${PORT}:${PORT}"
+    labels:
+      - "rahulbp"
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - bulk-insert-staging-network
+    volumes:
+      - /uploads
+    command: sh -c "npm run dev"
+
+networks:
+  bulk-insert-staging-network:
+    driver: bridge
+  bulk-insert-network:
+    driver: bridge
+
+volumes:
+  uploads:

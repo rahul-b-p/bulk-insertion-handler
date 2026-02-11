@@ -1,5 +1,0 @@
-2026-02-11T04:26:06.418Z error: Not found - /en 
-2026-02-11T04:26:06.542Z error: Not found - /favicon.ico 
-2026-02-11T04:27:12.359Z error: Not found - /en 
-2026-02-11T04:27:12.479Z error: Not found - /favicon.ico 
-2026-02-11T05:03:56.476Z error: Error closing server: Server is not running. [36m{"code":"ERR_SERVER_NOT_RUNNING","stack":"Error [ERR_SERVER_NOT_RUNNING]: Server is not running.\n    at Server.close (node:net:2359:12)\n    at Object.onceWrapper (node:events:622:28)\n    at Server.emit (node:events:520:35)\n    at emitCloseNT (node:net:2419:8)\n    at process.processTicksAndRejections (node:internal/process/task_queues:88:21)"}[0m

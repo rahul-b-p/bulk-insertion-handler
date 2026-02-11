@@ -2,7 +2,6 @@ import { config } from 'dotenv';
 
 import { envSchema } from '../schemas/env.schema.js';
 import errorsConstant from '../constants/errors.constant.js';
-import { EnvDto } from '../dtos/env.dto.js';
 
 // dotenv config
 config();
@@ -17,4 +16,4 @@ export const validateEnv = () => {
   }
 };
 
-export const env: EnvDto = envSchema.parse(process.env);
+export const env = envSchema.parse(process.env);

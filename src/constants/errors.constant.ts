@@ -6,4 +6,6 @@ export default {
   NOT_FOUND: 'Not Found',
   CONFLICT: 'Conflicted Existing content by this request',
   INTERNAL_SERVER_ERROR: 'Something went wrong',
+
+  INVALID_FILE_TYPE: 'Uploaded file is not supported in the application',
 };
